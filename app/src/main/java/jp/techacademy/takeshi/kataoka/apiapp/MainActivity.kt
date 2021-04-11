@@ -30,8 +30,12 @@ class MainActivity : AppCompatActivity(), FragmentCallback {
         }.attach()
     }
 
-    override fun onClickItem(url: String) {
-        WebViewActivity.start(this, url)
+    override fun onClickItem(shop: Shop) {
+        WebViewActivity.start(this, shop)
+    }
+
+    override fun onClickItem(favoriteShop: FavoriteShop) {
+        WebViewActivity.start(this, favoriteShop)
     }
 
     override fun onAddFavorite(shop: Shop) { // Favoriteに追加するときのメソッド（Fragment -> Activity へ通知する）

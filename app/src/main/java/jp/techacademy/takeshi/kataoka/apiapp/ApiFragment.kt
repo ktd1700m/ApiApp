@@ -49,10 +49,12 @@ class ApiFragment: Fragment() {
         // ここから初期化処理を行う
         // ApiAdapterのお気に入り追加、削除用のメソッドの追加を行う
         apiAdapter.apply {
-            onClickAddFavorite = { // Adapterの処理をそのままActivityに通知する
+            onClickAddFavorite = {
+                // Adapterの処理をそのままActivityに通知する
                 fragmentCallback?.onAddFavorite(it)
             }
-            onClickDeleteFavorite = { // Adapterの処理をそのままActivityに通知する
+            onClickDeleteFavorite = {
+                // Adapterの処理をそのままActivityに通知する
                 fragmentCallback?.onDeleteFavorite(it.id)
             }
             // Itemをクリックしたとき
